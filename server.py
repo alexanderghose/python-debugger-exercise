@@ -43,7 +43,7 @@ def count_quotes():
 
 @app.route("/quotes", methods=["POST"])
 def post_request():
-    data = request.get_json()ç
+    data = request.get_json()
     if "quote" in data:
         if len(data["quote"].split()) < 3:
             data["quote"] = "(Error: Too short) " + data["quote"]
